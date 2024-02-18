@@ -10,14 +10,44 @@ body {
 address {
   font-style: normal;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p {
+  margin: 0;
+  padding-left: 0;
+}
 a,
-ul,
-li {
+ul {
   text-decoration: none;
   list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
-
+.section {
+  padding: 120px 0;
+}
+.container {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 0;
+}
 /* header */
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav {
+  display: flex;
+  padding: 24px 0;
+}
 
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -28,75 +58,107 @@ li {
   text-transform: uppercase;
   text-decoration: none;
   color: #4d5ae5;
+  padding-right: 76px;
 }
-.logo .black {
+.logo-black {
   color: #2e2f42;
 }
-.nav .link {
+.header-menu {
+  display: flex;
+  gap: 40px;
+}
+.menu-link {
   font-weight: 500;
   color: #2e2f42;
   text-decoration: none;
 }
-.nav .link:hover,
-.nav .link:focus {
+.menu-link:hover,
+.menu-link:focus {
   color: #404bbf;
+  text-decoration: underline;
 }
-.contacts .item {
+.contacts-list {
+  display: flex;
+  padding: 24px 0;
+  gap: 40px;
+}
+.contacts-item {
   font-style: normal;
   color: #434455;
 }
-.contacts .item:focus,
-.contacts .item:hover {
+.contacts-item:focus,
+.contacts-item:hover {
   color: #404bbf;
 }
 
 /* ------------- Main -------------- */
-
-.page-title {
+.slogan-section {
   background-color: #2e2f42;
-  text-align: center;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
+  padding: 188px 472px;
+  display: flex;
+  justify-content: center;
 }
-.page-title .slogan {
+
+.slogan-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slogan {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #fff;
+  min-width: 496px;
+  max-width: 496px;
+  padding-bottom: 48px;
+  text-align: center;
 }
 .button {
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   letter-spacing: 0.04em;
   line-height: 1.5;
-  font-size: 16px;
   color: #ffffff;
-
   background-color: #4d5ae5;
   cursor: pointer;
+  border-radius: 4px;
+  padding: 16px 32px;
+  border: none;
 }
+
 .button:hover,
 .button:focus {
   background-color: #404bbf;
 }
 
-/* section#2 */
-
-.page-company .title {
+/* section-2 */
+.hidden-title {
+  visibility: hidden;
+}
+.company-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-bottom: 8px;
+}
+.company-list {
+  display: flex;
+  gap: 24px;
 }
 
-/* section#3 */
-
-.page-team {
+/* section-3 */
+.team-section {
   background-color: #f4f4fd;
 }
-.page-team .title {
+
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+.team-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -104,11 +166,20 @@ li {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: #2e2f42;
+  padding-bottom: 72px;
 }
-.page-team .item {
+.team-item {
   background-color: #ffffff;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+  padding: 0px 0px 32px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.page-team .name {
+.team-name {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -116,9 +187,9 @@ li {
   color: #2e2f42;
 }
 
-/* section#4 */
+/* section-4 */
 
-.page-portfolio .title {
+.portfolio-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -126,8 +197,16 @@ li {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: #2e2f42;
+  padding-bottom: 72px;
 }
-.page-portfolio .name {
+.portfolio-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.portfolio-item {
+}
+.portfolio-name {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -137,15 +216,23 @@ li {
 
 /* footer */
 
-.page-footer {
+.footer-page {
   background-color: #2e2f42;
   line-height: 1.17;
 }
-.page-footer .white {
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+.logo-white {
   color: #f4f4fd;
 }
-.page-footer .text {
+.footer-text {
   font-weight: 400;
   color: #f4f4fd;
   line-height: 1.5;
+  padding-bottom: 100px;
+  width: 264px;
+  padding-top: 16px;
 }
