@@ -73,12 +73,13 @@ img {
   margin-right: 332px;
 }
 .header-menu-item {
-  padding: 24px 0;
+  display: flex;
 }
 .menu-link {
   font-weight: 500;
   color: #2e2f42;
   text-decoration: none;
+  padding: 24px 0;
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -88,7 +89,6 @@ img {
 .contacts-list {
   display: flex;
   gap: 40px;
-  padding: 24px 0;
 }
 .contacts-item {
   font-style: normal;
@@ -150,6 +150,9 @@ img {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 .company-list {
   display: flex;
@@ -247,10 +250,6 @@ img {
 .footer-page {
   background-color: #2e2f42;
   padding: 100px 0;
-}
-.footer-container {
-  display: flex;
-  flex-direction: column;
 }
 .footer-logo {
   font-family: 'Raleway', sans-serif;
