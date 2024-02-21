@@ -143,8 +143,7 @@ img {
 
 /* section-2 */
 .visually-hidden {
-  position: fixed;
-  transform: scale(0);
+  visibility: hidden;
 }
 .company-list {
   display: flex;
